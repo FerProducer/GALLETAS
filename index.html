@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#4E3629">
+  <meta name="description" content="Galletas artesanales LUVAFE Dessert Bar. Descubre, elige y pide tu caja favorita.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LUVAFE Dessert Bar | Galletas artesanales">
+  <meta property="og:description" content="Un antojo hecho para disfrutarse. Pide tus galletas LUVAFE.">
+  <meta property="og:image" content="assets/galletas-luvafe.jpg">
+  <title>LUVAFE Dessert Bar | Galletas artesanales</title>
+  <link rel="icon" type="image/jpeg" href="assets/galletas-luvafe.jpg">
+  <style>
+    :root{--cream:#F3EFE0;--coffee:#4E3629;--terra:#A66E4E;--white:#fffdf8;--ink:#33251f;--muted:#786b62;--line:#e6dccd;--gold:#c69c6d}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
+    .announcement{background:var(--coffee);color:#fff;text-align:center;padding:10px 16px;font-size:12px;letter-spacing:.12em}
+    header{position:sticky;top:0;z-index:20;background:rgba(243,239,224,.94);backdrop-filter:blur(14px);border-bottom:1px solid #ded4c5}
+    .nav{max-width:1180px;margin:auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,serif;font-size:25px;letter-spacing:.23em;color:var(--coffee);font-weight:600}.brand small{display:block;font:9px/1.8 Inter, sans-serif;letter-spacing:.32em;text-align:center;color:var(--terra)}
+    .navlinks{display:flex;gap:26px;font-size:13px;color:#5f5148}.navlinks a:hover{color:var(--terra)}
+    .cart-btn{border:1px solid var(--coffee);background:var(--coffee);color:white;padding:11px 16px;border-radius:3px;font-size:12px;letter-spacing:.06em}
+    .hero{max-width:1180px;margin:auto;padding:56px 24px 72px;display:grid;grid-template-columns:1fr 1.03fr;gap:58px;align-items:center}
+    .eyebrow{color:var(--terra);font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+    h1{font:clamp(43px,6vw,76px)/.99 Georgia,serif;letter-spacing:-.045em;color:var(--coffee);font-weight:500;margin:20px 0}
+    .hero p{max-width:440px;color:var(--muted);font-size:16px;line-height:1.8}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border:1px solid var(--coffee);background:var(--coffee);color:white;font-size:12px;letter-spacing:.1em;text-transform:uppercase;transition:.2s}
+    .btn:hover{background:#674936;transform:translateY(-1px)}.btn.secondary{background:transparent;color:var(--coffee)}.btn.secondary:hover{background:#e9dfd0}
+    .hero-photo{position:relative}.hero-photo:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid #cdbba6;z-index:0}
+    .hero-photo img{position:relative;z-index:1;width:100%;height:570px;object-fit:cover;object-position:center;border-radius:2px;display:block}
+    .stamp{position:absolute;z-index:2;bottom:25px;left:-22px;background:var(--white);padding:17px 21px;color:var(--coffee);font:italic 17px Georgia,serif;box-shadow:0 8px 28px #39261920}
+    .section{padding:76px 24px}.section.white{background:var(--white)}.inner{max-width:1080px;margin:auto}
+    .section-head{text-align:center;margin-bottom:38px}.section-head h2{font:clamp(34px,4vw,48px) Georgia,serif;font-weight:500;color:var(--coffee);margin:12px 0}.section-head p{color:var(--muted);line-height:1.7}
+    .product{display:grid;grid-template-columns:1fr 1fr;background:#f8f4eb;border:1px solid var(--line);max-width:900px;margin:auto}
+    .product img{width:100%;height:100%;min-height:440px;object-fit:cover}.product-info{padding:clamp(26px,5vw,54px);display:flex;flex-direction:column;justify-content:center}
+    .product-info h3{font:36px Georgia,serif;color:var(--coffee);font-weight:500;margin:12px 0}
+    .product-info p{color:var(--muted);line-height:1.75;font-size:14px}
+    .price{font:30px Georgia,serif;color:var(--coffee);margin:14px 0 5px}.small{font-size:11px;color:var(--muted)}
+    .qtyrow{display:flex;align-items:center;gap:12px;margin:20px 0}.qtyrow label{font-size:12px;color:var(--muted)}
+    .qty{display:flex;border:1px solid var(--line);align-items:center}.qty button{border:0;background:transparent;padding:9px 13px;color:var(--coffee)}.qty span{min-width:25px;text-align:center;font-size:13px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:48px;text-align:center}
+    .feature{padding:24px 18px;border-top:1px solid var(--line)}.feature b{display:block;font:21px Georgia,serif;color:var(--coffee);font-weight:500;margin:10px}.feature span{font-size:12px;color:var(--muted);line-height:1.6}
+    .order-band{background:var(--coffee);color:#fff;padding:64px 24px;text-align:center}.order-band h2{font:clamp(32px,4vw,48px) Georgia,serif;font-weight:500;margin:10px}.order-band p{color:#e4d8ca;line-height:1.7}
+    .order-band .btn{background:var(--cream);color:var(--coffee);border-color:var(--cream);margin-top:14px}
+    .social{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:24px;font-size:12px;letter-spacing:.1em;text-transform:uppercase}.social a{border-bottom:1px solid #b99c82;padding-bottom:4px}
+    footer{padding:30px 24px;text-align:center;color:var(--muted);font-size:11px;letter-spacing:.08em}
+    .drawer-backdrop{position:fixed;inset:0;background:#1d130f88;z-index:40;display:none}.drawer-backdrop.open{display:block}
+    .drawer{position:fixed;z-index:41;right:0;top:0;height:100%;width:min(440px,100%);background:var(--white);padding:25px;overflow:auto;transform:translateX(105%);transition:.25s;box-shadow:-10px 0 40px #0002}
+    .drawer.open{transform:translateX(0)}.drawer-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:15px}
+    .drawer h3{font:27px Georgia,serif;color:var(--coffee);font-weight:500;margin:0}.close{border:0;background:none;font-size:25px;color:var(--coffee)}
+    .cart-line{display:flex;justify-content:space-between;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);font-size:13px}.cart-line small{display:block;color:var(--muted);margin-top:5px}
+    .cart-total{display:flex;justify-content:space-between;font-weight:700;color:var(--coffee);padding:20px 0}
+    .checkout{display:grid;gap:12px;margin-top:10px}.checkout label{font-size:11px;color:var(--muted);letter-spacing:.04em}
+    .checkout input,.checkout select,.checkout textarea{width:100%;padding:12px;border:1px solid var(--line);background:white;color:var(--ink);border-radius:2px;margin-top:5px}
+    .checkout textarea{min-height:70px;resize:vertical}.checkout .btn{width:100%;border:0}
+    .notice{font-size:11px;color:var(--muted);line-height:1.6}.empty{text-align:center;padding:35px 10px;color:var(--muted);font-size:14px}
+    @media(max-width:760px){.nav{padding:12px 16px}.navlinks{display:none}.hero{grid-template-columns:1fr;padding:38px 20px 55px;gap:35px}.hero-photo img{height:420px}.hero-photo:before{inset:12px -10px -10px 10px}.stamp{left:-8px}.product{grid-template-columns:1fr}.product img{height:330px;min-height:0}.features{grid-template-columns:1fr;gap:4px}.section{padding:58px 20px}}
+  </style>
+</head>
+<body>
+  <div class="announcement">GALLETAS ARTESANALES · HECHAS PARA COMPARTIR</div>
+  <header>
+    <nav class="nav">
+      <a class="brand" href="#">LUVAFE<small>DESSERT BAR</small></a>
+      <div class="navlinks"><a href="#galletas">Las galletas</a><a href="#experiencia">Nuestra esencia</a><a href="#contacto">Contacto</a></div>
+      <button class="cart-btn" id="openCart">TU PEDIDO (<span id="cartCount">0</span>)</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Un antojo hecho con cariño</div>
+        <h1>Pequeños momentos. Grandes antojos.</h1>
+        <p>Galletas de textura suave, doraditas y con chispas de chocolate. Un detalle delicioso para acompañar tu café, compartir o simplemente darte gusto.</p>
+        <div class="actions"><a class="btn" href="#galletas">Comprar galletas</a><a class="btn secondary" href="#experiencia">Conoce LUVAFE</a></div>
+      </div>
+      <div class="hero-photo">
+        <img src="assets/galletas-luvafe.jpg" alt="Caja de galletas artesanales LUVAFE con chispas de chocolate">
+        <div class="stamp">Un detalle para disfrutar.</div>
+      </div>
+    </section>
+
+    <section class="section white" id="galletas">
+      <div class="inner">
+        <div class="section-head"><div class="eyebrow">Recién hechas para ti</div><h2>El antojo de la casa</h2><p>Elige tu caja y prepara tu pedido en unos cuantos pasos.</p></div>
+        <article class="product">
+          <img src="assets/galletas-luvafe.jpg" alt="Presentación de galletas LUVAFE">
+          <div class="product-info">
+            <div class="eyebrow">Favoritas LUVAFE</div>
+            <h3>Caja de galletas con chocolate</h3>
+            <p>Galletas artesanales con chispas de chocolate, horneadas para lograr un exterior ligeramente dorado y un centro suave. Ideales para regalar o compartir.</p>
+            <div class="price" id="priceLabel">Precio por configurar</div>
+            <div class="small" id="presentationLabel">Presentación: caja (detalles por confirmar)</div>
+            <div class="qtyrow"><label for="quantity">Cantidad</label><div class="qty"><button type="button" id="minus">−</button><span id="quantity">1</span><button type="button" id="plus">+</button></div></div>
+            <button class="btn" id="addCart">Agregar al pedido</button>
+            <p class="small">La disponibilidad y el costo de entrega se confirman antes de cerrar tu pedido.</p>
+          </div>
+        </article>
+        <div class="features" id="experiencia">
+          <div class="feature"><div>✳</div><b>Hechas con cuidado</b><span>Una preparación pensada para convertir un antojo en un buen momento.</span></div>
+          <div class="feature"><div>♡</div><b>Para compartir</b><span>Un detalle rico para reuniones, regalos o tardes de café.</span></div>
+          <div class="feature"><div>☼</div><b>Pedido sencillo</b><span>Arma tu pedido aquí y coordina la entrega directamente por WhatsApp.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-band" id="contacto">
+      <div class="eyebrow" style="color:#d7b18a">Tu próximo antojo te espera</div>
+      <h2>Haz tu pedido LUVAFE</h2>
+      <p>Selecciona tus galletas, envía tu pedido y coordinamos contigo los detalles.</p>
+      <a class="btn" href="#galletas">Elegir mis galletas</a>
+      <div class="social" id="socialLinks"></div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> LUVAFE DESSERT BAR · HECHO PARA DISFRUTARSE</footer>
+
+  <div class="drawer-backdrop" id="backdrop"></div>
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras">
+    <div class="drawer-head"><h3>Tu pedido</h3><button class="close" id="closeCart" aria-label="Cerrar">×</button></div>
+    <div id="cartItems"><div class="empty">Tu carrito está vacío.</div></div>
+    <div class="cart-total"><span>Total estimado</span><span id="cartTotal">$0.00</span></div>
+    <form class="checkout" id="checkoutForm">
+      <label>Tu nombre<input id="customerName" required autocomplete="name" placeholder="Nombre y apellido"></label>
+      <label>Teléfono de contacto<input id="customerPhone" required type="tel" autocomplete="tel" placeholder="Tu número de teléfono"></label>
+      <label>¿Cómo quieres recibir tu pedido?
+        <select id="delivery"><option value="Por coordinar">Por coordinar</option><option value="Recoger en punto acordado">Recoger en punto acordado</option><option value="Entrega a domicilio">Entrega a domicilio</option></select>
+      </label>
+      <label>Dirección o zona de entrega (si aplica)<input id="address" placeholder="Colonia, calle o punto de entrega"></label>
+      <label>Notas del pedido<textarea id="notes" placeholder="Horario preferido, indicaciones o dudas"></textarea></label>
+      <button class="btn" type="submit">Enviar pedido por WhatsApp</button>
+      <p class="notice">Este envío abre WhatsApp con el resumen de tu pedido. El pedido queda sujeto a confirmación de disponibilidad, precio final y entrega por parte de LUVAFE. No se realiza ningún cobro en esta página.</p>
+    </form>
+  </aside>
+
+<script>
+/* CONFIGURACIÓN DE LA TIENDA: sustituye estos datos antes de publicar. */
+const STORE = {
+  whatsapp: "5210000000000", // México: 52 + número a 10 dígitos. Ejemplo: 521XXXXXXXXXX
+  instagram: "https://www.instagram.com/", // pega el enlace del perfil LUVAFE
+  facebook: "https://www.facebook.com/",   // pega el enlace de la página LUVAFE
+  productName: "Caja de galletas con chocolate",
+  price: 0,             // escribe el precio real en MXN, por ejemplo: 180
+  presentation: "Caja (define aquí cuántas piezas incluye)",
+  currency: "MXN"
+};
+const money = n => new Intl.NumberFormat("es-MX",{style:"currency",currency:STORE.currency}).format(n);
+let qty=1, cart=JSON.parse(localStorage.getItem("luvafe-cart")||"[]");
+const $=id=>document.getElementById(id);
+$("year").textContent=new Date().getFullYear();
+$("priceLabel").textContent=STORE.price>0?money(STORE.price):"Precio por configurar";
+$("presentationLabel").textContent="Presentación: "+STORE.presentation;
+$("socialLinks").innerHTML=`<a href="${STORE.instagram}" target="_blank" rel="noopener">Instagram</a><a href="${STORE.facebook}" target="_blank" rel="noopener">Facebook</a><a href="https://wa.me/${STORE.whatsapp}" target="_blank" rel="noopener">WhatsApp</a>`;
+function persist(){localStorage.setItem("luvafe-cart",JSON.stringify(cart));renderCart()}
+function renderCart(){
+  $("cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0);
+  if(!cart.length){$("cartItems").innerHTML='<div class="empty">Tu carrito está vacío.</div>';$("cartTotal").textContent=money(0);return}
+  $("cartItems").innerHTML=cart.map((x,i)=>`<div class="cart-line"><div><b>${x.name}</b><small>${x.qty} × ${money(x.price)}</small><button type="button" data-remove="${i}" style="border:0;background:none;color:#9b5b43;padding:8px 0 0;font-size:11px">Quitar</button></div><b>${money(x.qty*x.price)}</b></div>`).join("");
+  $("cartTotal").textContent=money(cart.reduce((s,x)=>s+x.qty*x.price,0));
+  document.querySelectorAll("[data-remove]").forEach(b=>b.addEventListener("click",()=>{cart.splice(Number(b.dataset.remove),1);persist()}));
+}
+function openCart(){ $("drawer").classList.add("open");$("backdrop").classList.add("open"); }
+function closeCart(){ $("drawer").classList.remove("open");$("backdrop").classList.remove("open"); }
+$("openCart").onclick=openCart;$("closeCart").onclick=closeCart;$("backdrop").onclick=closeCart;
+$("minus").onclick=()=>{qty=Math.max(1,qty-1);$("quantity").textContent=qty};
+$("plus").onclick=()=>{qty=Math.min(99,qty+1);$("quantity").textContent=qty};
+$("addCart").onclick=()=>{
+  if(STORE.price<=0){alert("La tienda aún no tiene un precio configurado. Edita STORE.price en el archivo index.html antes de recibir pedidos.");return}
+  const found=cart.find(x=>x.name===STORE.productName);
+  if(found)found.qty+=qty;else cart.push({name:STORE.productName,price:STORE.price,qty});
+  persist();openCart();
+};
+$("checkoutForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  if(!cart.length){alert("Agrega al menos un producto al pedido.");return}
+  if(!/^\d{10,15}$/.test(STORE.whatsapp.replace(/\D/g,"")) || STORE.whatsapp==="5210000000000"){alert("Configura el número real de WhatsApp de LUVAFE en STORE.whatsapp antes de publicar.");return}
+  const name=$("customerName").value.trim(),phone=$("customerPhone").value.trim();
+  const subtotal=cart.reduce((s,x)=>s+x.qty*x.price,0);
+  const lines=cart.map(x=>`• ${x.name} — ${x.qty} × ${money(x.price)} = ${money(x.qty*x.price)}`).join("\n");
+  const msg=`¡Hola, LUVAFE! Quiero realizar este pedido:\n\n${lines}\n\nTotal estimado: ${money(subtotal)}\n\nNombre: ${name}\nTeléfono: ${phone}\nEntrega: ${$("delivery").value}\nDirección/zona: ${$("address").value||"Por confirmar"}\nNotas: ${$("notes").value||"Sin notas"}\n\n¿Me confirman disponibilidad y entrega?`;
+  window.open(`https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(msg)}`,"_blank","noopener");
+});
+renderCart();
+</script>
+</body>
+</html>

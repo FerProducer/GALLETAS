@@ -1,0 +1,37 @@
+LUVAFE DESSERT BAR — TIENDA WEB
+================================
+
+ARCHIVOS
+- index.html: tienda, carrito y formulario de pedido.
+- assets/galletas-luvafe.jpg: fotografía proporcionada para el producto.
+
+ANTES DE PUBLICAR
+1. Abre index.html en un editor de texto.
+2. Busca el bloque CONFIGURACIÓN DE LA TIENDA.
+3. Cambia:
+   - whatsapp: número real con código de país. México: 52 + 10 dígitos.
+     Ejemplo de formato: 521XXXXXXXXXX (sin +, espacios ni guiones).
+   - instagram y facebook: enlaces completos a los perfiles de LUVAFE.
+   - price: precio real por caja en MXN (solo número).
+   - presentation: cantidad de galletas por caja y/o gramaje real.
+4. Guarda los cambios y prueba desde celular y computadora.
+
+PUBLICAR EN GITHUB PAGES
+1. Crea un repositorio en GitHub.
+2. Sube index.html y la carpeta assets completa a la raíz.
+3. En Settings > Pages, selecciona Deploy from a branch, rama main y carpeta / (root).
+4. Guarda y espera la URL que genera GitHub Pages.
+
+QUÉ HACE
+- Catálogo de producto, selector de cantidad y carrito persistente en el navegador.
+- Captura nombre, teléfono, método de entrega, zona y notas.
+- Genera un mensaje con el resumen y abre WhatsApp para enviar el pedido.
+- Enlaces sociales configurables y metadatos para compartir la página.
+
+LIMITACIONES IMPORTANTES
+Esta versión es una tienda ligera con cierre de pedido por WhatsApp. No procesa pagos,
+no confirma inventario en servidor, no calcula envíos automáticamente, no genera
+facturas ni ofrece un panel administrativo central. El carrito se guarda localmente
+en el navegador del comprador. Para pagos en línea, inventario sincronizado,
+órdenes administrables y múltiples usuarios se necesita integrar una plataforma
+de comercio electrónico o un backend con base de datos y pasarela de pago.
